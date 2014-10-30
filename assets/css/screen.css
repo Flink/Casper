@@ -176,7 +176,7 @@ html {
 body {
     height: 100%;
     max-height: 100%;
-    font-family: "Merriweather", serif;
+    font-family: "Gentium Basic", serif;
     letter-spacing: 0.01rem;
     font-size: 1.8rem;
     line-height: 1.75em;
@@ -202,7 +202,7 @@ h4, h5, h6 {
     color: #2E2E2E;
     line-height: 1.15em;
     margin: 0 0 0.4em 0;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Oswald", sans-serif;
 }
 
 h1 {
@@ -663,10 +663,10 @@ margin on the iframe, cause it breaks stuff. */
 .page-title {
     margin: 10px 0 10px 0;
     font-size: 5rem;
-    letter-spacing: -1px;
-    font-weight: 700;
-    font-family: "Open Sans", sans-serif;
+    letter-spacing: 0;
+    font-family: "Aladin", sans-serif;
     color: #fff;
+    text-shadow: 0 0 4px #000;
 }
 
 .page-description {
@@ -674,7 +674,7 @@ margin on the iframe, cause it breaks stuff. */
     font-size: 2rem;
     line-height: 1.5em;
     font-weight: 400;
-    font-family: "Merriweather", serif;
+    font-family: "Gentium Basic", serif;
     letter-spacing: 0.01rem;
     color: rgba(255,255,255,0.8);
 }
@@ -889,6 +889,15 @@ body:not(.post-template) .post-title {
     height: auto;
     margin: 0 auto;
     padding: 0.6em 0;
+}
+
+.post-content p {
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    -o-hyphens: auto;
 }
 
 /* Break out larger images to be wider than the main text column
@@ -1165,7 +1174,7 @@ body:not(.post-template) .post-title {
 /* Location, website, and link */
 .author-profile .author-meta {
     margin: 2rem 0;
-    font-family: "Merriweather", serif;
+    font-family: "Gentium Basic", serif;
     letter-spacing: 0.01rem;
     font-size: 1.7rem;
 }
