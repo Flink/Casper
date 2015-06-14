@@ -22,38 +22,30 @@
     {{! Ghost outputs important style and meta data with this tag }}
     {{ghost_head}}
 </head>
-<body class="{{body_class}}">
+<body class="{{body_class}} nav-closed">
 
-    {{! Everything else gets inserted here }}
-    {{{body}}}
+    {{navigation}}
 
-    <footer class="site-footer clearfix">
-         <section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> — Contenu sous licence <a href="https://creativecommons.org/licenses/by-sa/3.0/fr/">CC-BY-SA 3.0 FR</a> sauf mention contraire.</section>
-         <section class="poweredby">Propulsé par <a href="https://ghost.org">Ghost</a></section>
-    </footer>
+    <div class="site-wrapper">
+
+        {{! Everything else gets inserted here }}
+        {{{body}}}
+
+        <footer class="site-footer clearfix">
+            <section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> — Contenu sous licence <a href="https://creativecommons.org/licenses/by-sa/3.0/fr/">CC-BY-SA 3.0 FR</a> sauf mention contraire.</section>
+            <section class="poweredby">Propulsé par <a href="https://ghost.org">Ghost</a></section>
+        </footer>
+
+    </div>
 
     {{! Ghost outputs important scripts and data with this tag }}
     {{ghost_foot}}
 
-    {{! The main JavaScript file for Casper }}
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script type="text/javascript" src="{{asset "js/prism.js"}}"></script>
     <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
+    {{! The main JavaScript file for Casper }}
     <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
 
-    <!-- Piwik -->
-    <script type="text/javascript">
-      var _paq = _paq || [];
-      _paq.push(['trackPageView']);
-      _paq.push(['enableLinkTracking']);
-      (function() {
-        var u=(("https:" == document.location.protocol) ? "https" : "http") + "://stats.belfalas.eu/";
-        _paq.push(['setTrackerUrl', u+'piwik.php']);
-        _paq.push(['setSiteId', 8]);
-        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript';
-        g.defer=true; g.async=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
-      })();
-    </script>
-    <noscript><p><img src="http://stats.belfalas.eu/piwik.php?idsite=8" style="border:0;" alt="" /></p></noscript>
-    <!-- End Piwik Code -->
 </body>
 </html>
